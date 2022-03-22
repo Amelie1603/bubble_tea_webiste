@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,35 +13,12 @@ use App\Http\Controllers\UserAuthController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/dashbard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/sign', function () {
-    return view('sign');
-});
-
-
-
-// Route::get('/user/{id}', [UserController::class, 'show']);
-
-// Route::post('/sign', function () {
-//     return view('sign');
-// })->name('signIn');
-
-// Route::get('user/{id}', function($id) {
-//     return $id;
-//});
-
-Route::post('user', [UserauthController::class, 'userLogin']);
-Route::middleware('auth')->group(function () {
-    Route::get('/', function(){});
-    //reserver aux uses auth
-    Route::get('sign', function(){});
-    //uses no auth
-});
-Route::resource('user', UserController::class);
+require __DIR__.'/auth.php';
