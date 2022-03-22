@@ -11,13 +11,11 @@
     <title>Bubble My Tea</title>
   </head>
   <body>
-
-    
       <nav>
           <div class="text">         
                 <h1>Bubble My Tea</h1>
                 <p class="slogan">Même les pandas en boivent</p>
-                <img class="logo" src="resources/views/logo2.png" alt="logo du site" />
+                <form action ="/welcome" method="get"><button class="imglogo"><img class="logo" src="resources/views/logo2.png" alt="logo du site" /></form>
           </div>
           
           <div class="navigation">
@@ -31,14 +29,8 @@
              <form action ="/login" method="get"><button class="loginbutton">Login</button></form>
             @csrf
           </div>
-         
-         
-          
-          
-          
-          @layoult('nav')  
       </nav>
-
+      @yield('content')
   </body>
 </html>
 
