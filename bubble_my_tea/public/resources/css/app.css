@@ -5,6 +5,16 @@ body {
     padding-top: 0px;
 }
 
+
+.barre{
+position: absolute;
+top: 160px;
+width: 1500px;
+height: 30px;
+background: #F8CECE;
+}
+
+
 .logo {
     position:absolute;
     top: 10px;
@@ -66,6 +76,9 @@ button:hover {
     background-color: grey;
 
 }
+
+
+
 
 
 
