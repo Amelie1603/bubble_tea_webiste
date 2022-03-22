@@ -11,13 +11,13 @@
     <title>Bubble My Tea</title>
   </head>
   <body>
+
+    
       <nav>
           <div class="text">         
                 <h1>Bubble My Tea</h1>
                 <p class="slogan">Même les pandas en boivent</p>
                 <img class="logo" src="resources/views/logo2.png" alt="logo du site" />
-               
-
           </div>
           
           <div class="navigation">
@@ -32,15 +32,13 @@
             @csrf
           </div>
          
-          
          
           
           
           
-          
+          @layoult('nav')  
       </nav>
 
   </body>
 </html>
-
 
