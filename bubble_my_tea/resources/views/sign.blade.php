@@ -1,21 +1,42 @@
 <html>  
 <body>
   <div class="login-wrapper">
-    <h1>login</h1>
-    <form id="login" class="login" method="POST">
+    <h1>Sign In</h1>
+    <form action="{{ route('user.store') }}" id="sign" class="login" method="POST">
       @csrf
       <div>
-        <label for="mail">e-mail</label>
-        <input type="mail" name="mail" id="mail" placeholder="Enter your e-mail" required>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter your firstName" required>
+      </div>
+      <div>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Enter your lastName" required>
+      </div>
+      <div>
+        <label for="email">e-mail</label>
+        <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
+      </div>
+      <div>
+        <label for="phone">e-phone</label>
+        <input type="number" name="phone" id="phone" placeholder="Enter your e-phone" required>
+      </div>
+      <div>
+        <label for="address">address</label>
+        <input type="text" name="address" id="phone" placeholder="Enter your address" required>
       </div>
       <div>
         <label for="password">password</label>
         <input type="password" name="password" id="password" placeholder="Enter your password" required>
       </div>
-      <button type="submit">login</button>
+      <div>
+        <label for="password">Confirmed password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" name="send" value="Submit">Sign In</button>
     </form>
   </div>
 </body>
+
 <style>
 body {
   background-color: #f8cece;
