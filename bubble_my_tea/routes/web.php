@@ -26,6 +26,7 @@ Route::get('/sign', function () {
     return view('sign');
 });
 
+
 // Route::get('/user/{id}', [UserController::class, 'show']);
 
 // Route::post('/sign', function () {
