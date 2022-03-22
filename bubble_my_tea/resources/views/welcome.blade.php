@@ -8,14 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" type="text/css" href="resources/css/app.css"/>
+    <link rel="icon" href="">
     <title>Bubble My Tea</title>
   </head>
+  
   <body>
       <nav>
           <div class="text">         
                 <h1>Bubble My Tea</h1>
                 <p class="slogan">Même les pandas en boivent</p>
-                <img class="logo" src="resources/views/logo2.png" alt="logo du site" />
+                <form action ="/welcome" method="get"><button class="imglogo"><img class="logo" src="resources/views/logo2.png" alt="logo du site" /></form>
+                
                
 
           </div>
