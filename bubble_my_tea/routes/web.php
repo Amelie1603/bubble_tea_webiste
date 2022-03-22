@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,8 @@ Route::get('/sign', function () {
     return view('sign');
 });
 
+
+
 // Route::get('/user/{id}', [UserController::class, 'show']);
 
 // Route::post('/sign', function () {
@@ -36,4 +39,11 @@ Route::get('/sign', function () {
 //     return $id;
 //});
 
+Route::post('user', [UserauthController::class, 'userLogin']);
+Route::middleware('auth')->group(function () {
+    Route::get('/', function(){});
+    //reserver aux uses auth
+    Route::get('sign', function(){});
+    //uses no auth
+});
 Route::resource('user', UserController::class);

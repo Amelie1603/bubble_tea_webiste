@@ -12,7 +12,7 @@
   </head>
   <body>
       <nav>
-          <h1>Bubble My Teat</h1>
+          <h1>Bubble My Tea</h1>
           
       </nav>
 

@@ -2,7 +2,7 @@
 <body>
   <div class="login-wrapper">
     <h1>login</h1>
-    <form id="login" class="login" method="POST">
+    <form action="" id="login" class="login" method="POST">
       @csrf
       <div>
         <label for="mail">e-mail</label>
