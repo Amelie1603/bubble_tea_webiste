@@ -2,8 +2,18 @@
 <body>
   <div class="login-wrapper">
     <h1>Sign In</h1>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
     <form action="{{ route('user.store') }}" id="sign" class="login" method="POST">
       @csrf
+
       <div>
         <label for="firstname">First Name</label>
         <input type="text" name="firstname" id="firstname" placeholder="Enter your firstName" required>
@@ -22,7 +32,7 @@
       </div>
       <div>
         <label for="address">address</label>
-        <input type="text" name="address" id="phone" placeholder="Enter your address" required>
+        <input type="text" name="address" id="address" placeholder="Enter your address" required>
       </div>
       <div>
         <label for="password">password</label>

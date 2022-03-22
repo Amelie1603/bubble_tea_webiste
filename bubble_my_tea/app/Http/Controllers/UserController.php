@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -34,8 +35,28 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        $validates = $request->validate([
+            'firstname' => 'required',
+            'lastname' => 'required', 
+            'email' => 'required', 
+            'phone' => 'required', 
+            'address' => 'required',
+            'password' => 'required',
+        ]);
+
+        $user = new User;
+
+        $user->role = 'customer';
+        $user->firstname = $validates['firstname'];
+        $user->lastname = $validates['lastname'];
+        $user->email = $validates['email'];
+        $user->phone = $validates['phone'];
+        $user->password = $validates['password'];
+        $user->address = $validates['address'];
         
+
+        $user->save();
+        return 'user was created';
     }
 
     /**
