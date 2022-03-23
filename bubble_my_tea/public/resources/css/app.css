@@ -37,7 +37,7 @@ h1 {
     justify-content: center;
     display: flex;
     font-size: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     margin-top: 0px;
 }
 
@@ -60,9 +60,9 @@ nav {
 }
 
 .navigation {
-    position: absolute;
+    /* position: absolute;
     left: 700px;
-    bottom: 680px;
+    bottom: 680px; */
 
     display: flex;
     justify-content: flex-end;
@@ -79,13 +79,13 @@ button:hover {
 }
 
 .boba{
-    position:absolute;
+    /* position:absolute; */
     left: 400px
     
 }
 
 .slide{
-    position: absolute;
+    /* position: absolute; */
     top:190px;
     background-color: #FFFAFA;
     width: 1500px;
@@ -93,21 +93,21 @@ button:hover {
 }
 
 
-section{
+/* section{
 position: absolute;
 top:160px;
 width: 1500px;
 height: 30px;
 background: #F8CECE;
-}
+} */
 
-.description {
+/* .description {
 position: absolute;
 top:400px;
 width: 1500px;
 height: 30px;
 
-}
+} */
 
 
 
@@ -136,10 +136,12 @@ LOGIN CSS
     flex-direction: column;
     gap: 20px;
 }
+
 .login label {
     font-size: 24px;
     text-transform: capitalize;
 }
+
 .login input {
     border: none;
     border-bottom: 1px solid #acacac;
@@ -147,6 +149,7 @@ LOGIN CSS
     outline: none;
     padding: 10px 0;
 }
+
 .login {
     width: 40vw;
     padding: 24px;
@@ -154,6 +157,7 @@ LOGIN CSS
     flex-direction: column;
     gap: 30px;
 }
+
 .login .submit {
     border: 1px solid #00000069;
     cursor: pointer;
@@ -165,8 +169,71 @@ LOGIN CSS
     background-color: #ffe4e4;
     outline: none;
 }
+
 .login .submit:hover {
     color: #eb9c9c;
     transition: 0.2s ease;
     background-color: #fff;
 }
+
+footer{
+    background-color:#ffffff;
+    color:#020102;
+    width: 100%;
+    background-color: #411f38;
+}
+  
+footer ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    /* line-height:1.6;*/
+    margin-bottom:0;
+  }
+  
+  footer li {
+    padding:0 0px;
+  }
+  
+  footer ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  footer ul a:hover {
+    opacity:1;
+  }
+  
+  footer .social {
+    text-align:center;
+    padding-bottom:00px;
+  }
+  
+  footer .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    /*line-height:40px;*/
+    display:inline-block;
+    text-align:center;
+    margin:20px 15px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  footer .social > a:hover {
+    opacity:0.9;
+  }
+  
+  footer .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+ 
+
+  
