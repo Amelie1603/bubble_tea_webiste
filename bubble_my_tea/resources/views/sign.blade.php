@@ -1,5 +1,6 @@
-<html>  
-<body>
+@extends('layouts.default')
+
+@section('content')
   <div class="login-wrapper">
     <h1>Sign In</h1>
     <form action="{{ route('user.store') }}" id="sign" class="login" method="POST">
@@ -17,25 +18,33 @@
         <input type="email" name="email" id="email" placeholder="Enter your e-mail" required>
       </div>
       <div>
-        <label for="phone">e-phone</label>
+        <label for="phone">phone</label>
         <input type="number" name="phone" id="phone" placeholder="Enter your e-phone" required>
       </div>
       <div>
         <label for="address">address</label>
-        <input type="text" name="address" id="phone" placeholder="Enter your address" required>
+        <input type="text" name="address" id="address" placeholder="Enter your address" required>
       </div>
       <div>
         <label for="password">password</label>
         <input type="password" name="password" id="password" placeholder="Enter your password" required>
       </div>
       <div>
-        <label for="password">Confirmed password</label>
-        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+        <label for="password_confirmation">Confirmed password</label>
+        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Enter your password" required>
       </div>
+      @if ($errors->any())
+        <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+        </div>
+      @endif
       <button type="submit" name="send" value="Submit">Sign In</button>
     </form>
   </div>
-</body>
 
 <style>
 body {
@@ -94,5 +103,4 @@ h1 {
   background-color: #fff;
 }
 </style>
-
-</html>
+@endsection
