@@ -5,12 +5,22 @@ body {
     padding-top: 0px;
 }
 
+
+.barre{
+position: absolute;
+top: 160px;
+width: 1500px;
+height: 30px;
+background: #F8CECE;
+}
+
+
 .logo {
-    position:absolute;
+    position: absolute;
     top: 10px;
     border-radius: 50%;
-    width : 150px;
-    height : 140px;
+    width: 150px;
+    height: 140px;
     margin-left: 50px;
     padding-bottom: 50px;
     box-shadow: grey;
@@ -22,30 +32,104 @@ h1 {
     font-size: 60px;
     margin-bottom: 60px;
     margin-top: 0px;
-    
+}
+
+.slogan {
+    color: grey;
+    display: flex;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 0px;
 }
 
 nav {
-    background-color: #F3E0E0;
+    background-color: #f3e0e0;
     margin: 0px;
     padding: 0px;
     margin-top: 0px;
     padding-top: 10px;
     height: 150px;
     width: auto;
-    
-   
 }
 
-section{
+.navigation {
+    position: absolute;
+    left: 800px;
+    bottom: 680px;
 
-    background-color:#F8CECE;
-    height: 25px;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 0px;
-    padding-top: 10px;
-    
-    width: auto;
-    
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    margin-left: 60px;
+    font-size: 13px;
+    right: 20px;
+}
+
+button:hover {
+    background-color: grey;
+}
+
+
+
+
+
+
+LOGIN CSS
+
+.bodylogin {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.h1login {
+    text-transform: uppercase;
+    font-size: 32px;
+}
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 30px;
+}
+.login > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.login label {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.login input {
+    border: none;
+    border-bottom: 1px solid #acacac;
+    font-size: 20px;
+    outline: none;
+    padding: 10px 0;
+}
+.login {
+    width: 40vw;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.login .submit {
+    border: 1px solid #00000069;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 20px;
+    align-self: center;
+    transition: 0.2s ease;
+    background-color: #ffe4e4;
+    outline: none;
+}
+.login .submit:hover {
+    color: #eb9c9c;
+    transition: 0.2s ease;
+    background-color: #fff;
 }
