@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,13 @@ Route::get('/dashboard', function () {
 Route::get('/profil', function () {
     return view('profil');
 });
+
+Route::get('products', [ProductController::class, 'index']);
+
+Route::get('cart', [ProductController::class, 'cart']);
+
+Route::get('addToCart/{id}', [ProductController::class, 'addToCart']);
+
+// Route::delete('removeFromCart', [ProductController::class, "remove"]);
 
 require __DIR__.'/auth.php';
