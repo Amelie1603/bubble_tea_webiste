@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,23 @@ Route::get('/sign', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+// Route::get('/profil', function () {
+//     return view('profil');
+// });
+
+Route::get('profil', [UserController::class, 'show'])->middleware('auth');
+
+Route::get('products', [ProductController::class, 'index']);
+
+Route::get('cart', [ProductController::class, 'cart']);
+
+Route::get('addToCart/{id}', [ProductController::class, 'addToCart']);
+
+// Route::delete('removeFromCart', [ProductController::class, "remove"]);
+
+Route::get('order_products/{id}', [ProductController::class, 'addToCart']);
+
 
 require __DIR__.'/auth.php';
 

@@ -26,6 +26,13 @@ background: #F8CECE;
     box-shadow: grey;
 }
 
+.logo2 {
+    position: absolute;
+    width: 164px;
+    top: -1px;
+    left: 280px
+}
+
 h1 {
     justify-content: center;
     display: flex;
@@ -54,7 +61,7 @@ nav {
 
 .navigation {
     position: absolute;
-    left: 800px;
+    left: 700px;
     bottom: 680px;
 
     display: flex;
@@ -71,6 +78,36 @@ button:hover {
     background-color: grey;
 }
 
+.boba{
+    position:absolute;
+    left: 400px
+    
+}
+
+.slide{
+    position: absolute;
+    top:190px;
+    background-color: #FFFAFA;
+    width: 1500px;
+    height: 240px;
+}
+
+
+section{
+position: absolute;
+top:160px;
+width: 1500px;
+height: 30px;
+background: #F8CECE;
+}
+
+.description {
+position: absolute;
+top:400px;
+width: 1500px;
+height: 30px;
+
+}
 
 
 
