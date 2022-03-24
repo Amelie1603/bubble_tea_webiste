@@ -1,51 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="description" content="--XXXXXXX--"/>
-    <meta name="keywords" content="HTML CSS JAVASCRIPT"/>
-    <meta name="author" content="--XXXXXXX--"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" type="text/css" href="resources/css/app.css"/>
-    <link rel="icon" type="image/x-icon" href="resources/views/logo2.png">
-    <title>Bubble My Tea</title>
-  </head>
-  <body>
-      <nav>
-          <div class="text">         
-                <h1>Bubble My Tea</h1>
-                <p class="slogan">Même les pandas en boivent</p>
-                <img class="logo" src="resources/views/logo2.png" alt="logo du site" />
-                <img class="logo2" src="resources/views/bambou-2.png" alt="logo du site"/>
-          </div>
-          
-          <div class="navigation">
-            
-             <form action ="/order" method="get"><button class="commandebutton">Mes commandes</button></form>
+<<<<<<< bubble_my_tea/resources/views/layouts/default.blade.php
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <title>Bubble My Tea</title>
+</head>
 
-            <form action ="/" method="get"><button class="commandebutton">Home</button></form>
-             @csrf
-             @if (Auth::check()) 
-                <form action ="/login" method="get"><button class="commandebutton">Mes commandes</button></form>
-                @csrf 
-                <form action ="/profil" method="get"><button class="comptebutton">Mon compte</button></form>
-                @csrf
-             @endif
-            <form action ="/products" method="get"><button class="commanderbutton">Commander</button></form>
-             @csrf
-             <form action ="/login" method="get"><button class="loginbutton">Login</button></form>
-            @csrf
-          </div>
-          <section>
-          </section>
-      </nav>
-      @yield('content')
-
-      
-  </body>
+<body>
+{{-- HEADER --}}
+<header class="font-pacifico bg-pink flex items-center p-4 py-1">
+  <nav class="container mx-auto">
+      <h1 class="text-5xl text-center mt-2">Bubble My Tea</h1>
+      <p class="text-gray text-center mt-4 text-xl ">Même les pandas en boivent !</p>
+    <div class=" w-20 justify-start">
+      <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
+    </div>
+    <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
+      <form action ="/home" method="get"><button class="cursor-pointer">Home</button></form>
+      <form action ="/profil" method="get"><button class="cursor-pointer">Profil</button></form>
+      <form action ="/login" method="get"><button class="cursor-pointer">Shop</button></form>
+      <form action ="/login" method="get"><button class="cursor-pointer">Login</button></form>
+      @csrf
+    </ul>
   
-        <footer>
+    <div class="flex sm:hidden flex-1 justify-end">
+      <i class="fa-regular fa-bars"></i>
+    </div>
+
+  </nav>
+
+
+
+</header>
+<div class="containeur mx-auto bg-pink1 p-4"></div>
+
+@yield('content')
+<footer>
             <div class="social">
               <a href="https://www.instagram.com/?hl=fr"><img src="/resources/views/instagram.png" alt="Img instagram" width=40px></a> 
               <a href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
@@ -63,6 +55,5 @@
         
     </div>
     </footer>
- 
-</html>
 
+</body>
