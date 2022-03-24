@@ -7,8 +7,6 @@
             </div>
             <div class="description">
                 <p>C'est quoi un Bubble Tea ?<br>Un bubble tea est une boisson à base de thé à laquelle on ajoute des perles de tapioca voir d'autre goûts</p>
-            
-            
-        </div>
+            </div>
       
 @endsection

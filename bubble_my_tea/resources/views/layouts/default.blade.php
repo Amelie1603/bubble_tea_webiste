@@ -21,6 +21,8 @@
           </div>
           
           <div class="navigation">
+            
+             <form action ="/order" method="get"><button class="commandebutton">Mes commandes</button></form>
 
             <form action ="/" method="get"><button class="commandebutton">Home</button></form>
              @csrf
