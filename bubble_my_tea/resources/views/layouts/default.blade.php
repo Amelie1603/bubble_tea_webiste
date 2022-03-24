@@ -17,24 +17,28 @@
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
-        <form action ="/" method="get">@csrf
-        <button class="cursor-pointer">Home</button></form>@if (Auth::check()) 
+        <form action ="/" method="get">
+            <button class="cursor-pointer">Home</button>
+        </form>@if (Auth::check()) @endif
         <form action ="/profil" method="get">@csrf
-        <button class="cursor-pointer">Profil</button></form>@endif
+            <button class="cursor-pointer">Profil</button>
+        </form>
         <form action ="/products" method="get">@csrf
-        <button class="cursor-pointer">Shop</button></form>
+            <button class="cursor-pointer">Shop</button></form>
         <form action ="/login" method="get">@csrf
-        <button class="cursor-pointer">Login</button></form>      
+            <button class="cursor-pointer">Login</button>
+        </form>      
       </ul>
   </nav>
 </header>
-<div class="containeur mx-auto bg-pink1 p-4"></div>
+<div class="containeur  bg-pink1 p-4"></div> 
 @yield('content')
 
 {{-- FOOTER --}}
 
-  <footer>
-    <div class="social">
+  {{-- <footer class="font-pacifico  flex items-center p-4 py-1 bg-gray ">
+    <p>Hello le footer<p> --}}
+    {{-- <div class="social">
       <a href="https://www.instagram.com/?hl=fr"><img src="/resources/views/instagram.png" alt="Img instagram" width=40px></a> 
       <a href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
       <a href="https://twitter.com/?lang=fr" ><img src="/resources/views/twitter.png" width=40px> </a>
@@ -49,7 +53,7 @@
       </ul>
         <p class="copyright">Bubble My Tea © 2021</p>
         
-    </div>
+    </div> --}}
   </footer>
 
 </body>

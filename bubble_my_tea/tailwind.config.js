@@ -5,6 +5,7 @@ module.exports = {
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/layouts/default.blade.php',
+        './resources/views/welcome.blade.php',
     ],
 
     theme: {
@@ -12,12 +13,14 @@ module.exports = {
             "pink":"#fee2e2",
             "pink1":"#fca5a5",
             "gray":"#9ca3af",
+            "lightpink":"#FFFAFA",
         },
         extend: {
            
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 pacifico: ["Pacifico, cursive"],
+                karla:["Karla"],
             },
         },
         container:{
