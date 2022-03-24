@@ -1,3 +1,4 @@
+<<<<<<< bubble_my_tea/resources/views/layouts/default.blade.php
 <!doctype html>
 <html>
 <head>
@@ -36,12 +37,23 @@
 <div class="containeur mx-auto bg-pink1 p-4"></div>
 
 @yield('content')
+<footer>
+            <div class="social">
+              <a href="https://www.instagram.com/?hl=fr"><img src="/resources/views/instagram.png" alt="Img instagram" width=40px></a> 
+              <a href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
+              <a href="https://twitter.com/?lang=fr" ><img src="/resources/views/twitter.png" width=40px> </a>
+              <a href="https://www.facebook.com/"><img src="/resources/views/facebook.png" width=40px></a>
+          </div>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="/home">Home</a></li>
+              <li class="list-inline-item"><a href="#">Services</a></li>
+              <li class="list-inline-item"><a href="#">About</a></li>
+              <li class="list-inline-item"><a href="#">Terms</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Bubble My Tea © 2021</p>
+        
+    </div>
+    </footer>
+
 </body>
-</html>
-
-  
-               
-               
-       
-          
-

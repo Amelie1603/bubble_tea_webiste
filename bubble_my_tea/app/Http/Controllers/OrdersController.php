@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Order;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class UserController extends Controller
+class OrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+            // $products = DB::table('products')->get();
+            $orders = Product::all();
+            // dd($products);
+            return view('profil')->with('order', $order);
+          
     }
 
     /**
@@ -24,7 +28,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('sign');
+        //
     }
 
     /**
@@ -35,28 +39,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $validates = $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required', 
-            'email' => 'required', 
-            'phone' => 'required', 
-            'address' => 'required',
-            'password' => 'required',
-        ]);
-
-        $user = new User;
-
-        $user->role = 'customer';
-        $user->firstname = $validates['firstname'];
-        $user->lastname = $validates['lastname'];
-        $user->email = $validates['email'];
-        $user->phone = $validates['phone'];
-        $user->password = $validates['password'];
-        $user->address = $validates['address'];
-        
-
-        $user->save();
-        return 'user was created';
+        //
     }
 
     /**
@@ -65,12 +48,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function show($id)
     {
-        // return view('user.profil', [
-        //     'user' => User::findOrFail($id)
-        // ]);
+        //
     }
 
     /**
