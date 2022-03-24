@@ -60,9 +60,9 @@ nav {
 }
 
 .navigation {
-    /* position: absolute;
+    position: absolute;
     left: 700px;
-    bottom: 680px; */
+    bottom: 680px;
 
     display: flex;
     justify-content: flex-end;
@@ -79,13 +79,13 @@ button:hover {
 }
 
 .boba{
-    /* position:absolute; */
+    position:absolute;
     left: 400px
     
 }
 
 .slide{
-    /* position: absolute; */
+    position: absolute;
     top:190px;
     background-color: #FFFAFA;
     width: 1500px;
@@ -93,21 +93,21 @@ button:hover {
 }
 
 
-/* section{
+section{
 position: absolute;
 top:160px;
 width: 1500px;
 height: 30px;
 background: #F8CECE;
-} */
+}
 
-/* .description {
+.description {
 position: absolute;
 top:400px;
 width: 1500px;
 height: 30px;
 
-} */
+}
 
 
 
