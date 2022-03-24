@@ -16,55 +16,40 @@
     <div class=" w-20 justify-start">
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>
-    <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
-      <form action ="/" method="get">
-        @csrf
-        <button class="cursor-pointer">Home</button>
-      </form>
-      @if (Auth::check()) 
-      <form action ="/profil" method="get">
-        @csrf
-        <button class="cursor-pointer">Profil</button>
-      </form>
-      @endif
-      <form action ="/products" method="get">
-        @csrf
-        <button class="cursor-pointer">Shop</button>
-      </form>
-      <form action ="/login" method="get">
-        @csrf
-        <button class="cursor-pointer">Login</button>
-      </form>      
-    </ul>
-    <div class="flex sm:hidden flex-1 justify-end">
-      <i class="fa-regular fa-bars"></i>
-    </div>
-
+      <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
+        <form action ="/" method="get">@csrf
+        <button class="cursor-pointer">Home</button></form>@if (Auth::check()) 
+        <form action ="/profil" method="get">@csrf
+        <button class="cursor-pointer">Profil</button></form>@endif
+        <form action ="/products" method="get">@csrf
+        <button class="cursor-pointer">Shop</button></form>
+        <form action ="/login" method="get">@csrf
+        <button class="cursor-pointer">Login</button></form>      
+      </ul>
   </nav>
-
-
-
 </header>
 <div class="containeur mx-auto bg-pink1 p-4"></div>
-
 @yield('content')
-<footer>
-            <div class="social">
-              <a href="https://www.instagram.com/?hl=fr"><img src="/resources/views/instagram.png" alt="Img instagram" width=40px></a> 
-              <a href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
-              <a href="https://twitter.com/?lang=fr" ><img src="/resources/views/twitter.png" width=40px> </a>
-              <a href="https://www.facebook.com/"><img src="/resources/views/facebook.png" width=40px></a>
-          </div>
-            <ul class="list-inline">
-              <li class="list-inline-item"><a href="/home">Home</a></li>
-              <li class="list-inline-item"><a href="#">Services</a></li>
-              <li class="list-inline-item"><a href="#">About</a></li>
-              <li class="list-inline-item"><a href="#">Terms</a></li>
-              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-            <p class="copyright">Bubble My Tea © 2021</p>
+
+{{-- FOOTER --}}
+
+  <footer>
+    <div class="social">
+      <a href="https://www.instagram.com/?hl=fr"><img src="/resources/views/instagram.png" alt="Img instagram" width=40px></a> 
+      <a href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
+      <a href="https://twitter.com/?lang=fr" ><img src="/resources/views/twitter.png" width=40px> </a>
+      <a href="https://www.facebook.com/"><img src="/resources/views/facebook.png" width=40px></a>
+    </div>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="/home">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+        <p class="copyright">Bubble My Tea © 2021</p>
         
     </div>
-    </footer>
+  </footer>
 
 </body>
