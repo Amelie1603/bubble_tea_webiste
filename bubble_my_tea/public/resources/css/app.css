@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+
+.barre{
+position: absolute;
+top: 160px;
+width: 1700px;
+height: 30px;
+background: #F8CECE;
+}
+
+
+.logo {
+    position: absolute;
+    top: 10px;
+    border-radius: 50%;
+    width: 150px;
+    height: 140px;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    box-shadow: grey;
+}
+
+.logo2 {
+    position: absolute;
+    width: 163px;
+    top: -2px;
+    left: 280px
+}
+
+.logo3{
+    width: 20px;
+    position: absolute;
+    top: 120px;
+    left:740px;
+}
+.logo4{
+    width: 20px;
+    position: absolute;
+    top: 120px;
+    left:850px;
+}
+
+.logo5{
+    width: 20px;
+    position: absolute;
+    top: 120px;
+    left:1025px;
+}
+
+.logo6{
+    width: 20px;
+    position: absolute;
+    top: 120px;
+    left:1325px;
+}
+
+.logo7{
+    width: 20px;
+    position: absolute;
+    top: 120px;
+    left:1180px;
+}
+
+.shop{
+    
+        width: 30px;
+        position: absolute;
+        top: 15px;
+        left:1250px;
+    
+}
+
+h1 {
+    justify-content: center;
+    display: flex;
+    font-size: 60px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Pacifico', cursive;
+}
+
+.slogan {
+    color: grey;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 0px;
+}
+
+nav {
+    background-color: #f3e0e0;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    padding-top: 10px;
+    height: 150px;
+    width: auto;
+}
+
+.navigation {
+    margin:auto
+    
+
+}
+    
+
+   
+
+button {
+    margin-left: 60px;
+    font-size: 13px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+button:hover {
+    background-color: #C4C4C4;
+    border-radius: 30px;
+}
+
+.boba{
+    position:absolute;
+    left: 400px
+    
+}
+
+.slide{
+   
+    margin-top:28px;
+    background-color: #FFFAFA;
+    width: auto;
+    height: 240px;
+}
+
+
+section{
+
+margin-top:-25px;
+width: auto;
+height: 30px;
+background: #F8CECE;
+}
+
+.description {
+position: absolute;
+top:400px;
+width: auto;
+height: 30px;
+
+}
+.containeur{
+    column-count: 3;
+    font-family: 'Pacifico', cursive;
+}
+
+PROFIL CSS
+
+
+
+
+LOGIN CSS
+
+.bodylogin {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.h1login {
+    text-transform: uppercase;
+    font-size: 32px;
+}
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 30px;
+}
+.login > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login label {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.login input {
+    border: none;
+    border-bottom: 1px solid #acacac;
+    font-size: 20px;
+    outline: none;
+    padding: 10px 0;
+}
+
+.login {
+    width: 40vw;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login .submit {
+    border: 1px solid #00000069;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 40px;
+    font-size: 20px;
+    align-self: center;
+    transition: 0.2s ease;
+    background-color: #ffe4e4;
+    outline: none;
+}
+
+.login .submit:hover {
+    color: #eb9c9c;
+    transition: 0.2s ease;
+    background-color: #fff;
+}
+
+footer{
+    background-color:#ffffff;
+    color:#020102;
+    width: 100%;
+    background-color: #411f38;
+}
+  
+footer ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    /* line-height:1.6;*/
+    margin-bottom:0;
+  }
+  
+  footer li {
+    padding:0 0px;
+  }
+  
+  footer ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  footer ul a:hover {
+    opacity:1;
+  }
+  
+  footer .social {
+    text-align:center;
+    padding-bottom:00px;
+  }
+  
+  footer .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    /*line-height:40px;*/
+    display:inline-block;
+    text-align:center;
+    margin:20px 15px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  footer .social > a:hover {
+    opacity:0.9;
+  }
+  
+  footer .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+ 
+
+  
