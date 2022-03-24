@@ -6,6 +6,14 @@ module.exports = {
         './storage/framework/views/*.php',
         './resources/views/layouts/default.blade.php',
         './resources/views/welcome.blade.php',
+        './resources/views/components/button.blade.php',
+        './resources/views/components/application-logo.blade.php',
+        './resources/views/components/auth-card.blade.php',
+       './resources/views/components/input.blade.php',
+       './resources/views/components/auth-session-status.blade.php',
+      './resources/views/auth/login.blade.php,',
+      './resources/views/components/dropdown-link.blade.php',
+      
     ],
 
     theme: {
