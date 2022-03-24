@@ -22,13 +22,15 @@
           
           <div class="navigation">
 
-            <form action ="/home" method="get"><button class="commandebutton">Home</button></form>
+            <form action ="/" method="get"><button class="commandebutton">Home</button></form>
              @csrf
-             <form action ="/login" method="get"><button class="commandebutton">Mes commandes</button></form>
-             @csrf
-             <form action ="/profil" method="get"><button class="comptebutton">Mon compte</button></form>
-            @csrf
-            <form action ="/login" method="get"><button class="commanderbutton">Commander</button></form>
+             @if (Auth::check()) 
+                <form action ="/login" method="get"><button class="commandebutton">Mes commandes</button></form>
+                @csrf 
+                <form action ="/profil" method="get"><button class="comptebutton">Mon compte</button></form>
+                @csrf
+             @endif
+            <form action ="/products" method="get"><button class="commanderbutton">Commander</button></form>
              @csrf
              <form action ="/login" method="get"><button class="loginbutton">Login</button></form>
             @csrf

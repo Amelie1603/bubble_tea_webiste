@@ -10,10 +10,11 @@
       <p>{{$details['description']}}</p>
       <span>{{$details['quantity']}}</span>
     @endforeach
-    @endif
     <div>
       <h4>Total </h4>
       <span>{{$total}}</span>
     </div>
+    @endif
+    
   </div>
 @endsection
