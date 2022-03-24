@@ -1,4 +1,3 @@
-<<<<<<< bubble_my_tea/resources/views/layouts/default.blade.php
 <!doctype html>
 <html>
 <head>
@@ -18,13 +17,25 @@
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>
     <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
-      <form action ="/home" method="get"><button class="cursor-pointer">Home</button></form>
-      <form action ="/profil" method="get"><button class="cursor-pointer">Profil</button></form>
-      <form action ="/login" method="get"><button class="cursor-pointer">Shop</button></form>
-      <form action ="/login" method="get"><button class="cursor-pointer">Login</button></form>
-      @csrf
+      <form action ="/" method="get">
+        @csrf
+        <button class="cursor-pointer">Home</button>
+      </form>
+      @if (Auth::check()) 
+      <form action ="/profil" method="get">
+        @csrf
+        <button class="cursor-pointer">Profil</button>
+      </form>
+      @endif
+      <form action ="/products" method="get">
+        @csrf
+        <button class="cursor-pointer">Shop</button>
+      </form>
+      <form action ="/login" method="get">
+        @csrf
+        <button class="cursor-pointer">Login</button>
+      </form>      
     </ul>
-  
     <div class="flex sm:hidden flex-1 justify-end">
       <i class="fa-regular fa-bars"></i>
     </div>

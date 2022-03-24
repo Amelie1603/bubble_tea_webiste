@@ -11,7 +11,27 @@
             <p><a href={{ url('addToCart/'.$product->id) }}>+</a></p>
           </li>
         @endforeach
-      </ul>
-      
+      </ul>     
     </div>
+    @if(session('cart'))
+    <div>
+      <h2>Shopping Cart</h2>
+    <?php $total = 0 ?>
+    @foreach(session('cart') as $id => $details)
+    <?php $total += $details['price'] * $details['quantity'] ?>
+      <h3>{{$details['name']}}</h3>
+      <p>{{$details['description']}}</p>
+      <span>x {{$details['quantity']}}</span>
+      <span>{{$details['price']}} €</span>
+    @endforeach
+    <div>
+      <h4>Total </h4>
+      <span>{{$total}} €</span>
+    </div>
+    <form action="order">
+      @csrf
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+  @endif
 @endsection
