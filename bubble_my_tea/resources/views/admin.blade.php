@@ -27,7 +27,8 @@
                 <a class="button" href="{{ route('product.edit', $product) }}">Edit</a>   
                 @csrf
                 @method('DELETE')      
-                <button class="button" type="submit">Delete</button>
+                <button onclick="return confirm('Your product will be deleted. Do you wish to continue ?')" 
+                    class="button" type="submit">Delete</button>
             </form>
             </form>
           </li>
