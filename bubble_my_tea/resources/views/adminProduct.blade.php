@@ -14,8 +14,7 @@
         <br />
         <textarea name="description" placeholder="Description ...">{{ isset($product->description) ? $product->description : old('description') }}</textarea>
         <br />
-        <input type="submit" name="update" value="Update" style="background-color: darksalmon; 
-        border-radius: 8px; padding: 0.2rem 0.5rem; margin: 1rem 0 1rem 0.5rem;"/>
+        <input type="submit" name="update" value="Update" />
     </form>
    
 @endsection
