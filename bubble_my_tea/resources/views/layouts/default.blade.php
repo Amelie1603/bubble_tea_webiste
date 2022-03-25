@@ -5,21 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <title>Bubble My Tea</title>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
 {{-- HEADER --}}
+
 <header class="font-pacifico bg-pink flex items-center p-4 py-1">
-  <nav class="container mx-auto">
+  <nav x-data="{ open: true }" class="container mx-auto">
       <h1 class="text-5xl text-center mt-2">Bubble My Tea</h1>
       <p class="text-gray text-center mt-4 text-xl ">Même les pandas en boivent !</p>
     <div class=" w-20 justify-start">
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>
+    <!-- Settings Dropdown -->
+    <div class="hidden sm:flex sm:items-center sm:ml-6">
+      <x-dropdown align="right" width="48">
+          <x-slot name="trigger">
+              <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+
+                  <div class="ml-1">
+                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                  </div>
+              </button>
+          </x-slot>
+          @if (Auth::check())
+          <x-slot name="content">
+              <!-- Authentication -->
+              <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+
+                  <x-dropdown-link :href="route('logout')"
+                          onclick="event.preventDefault();
+                                      this.closest('form').submit();">
+                      {{ __('Log Out') }}
+                  </x-dropdown-link>
+              </form>
+          </x-slot>
+          @else
+          <x-slot name="content">
+            <!-- Authentication -->
+            <form method="GET" action="{{ route('login') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('login')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Log In') }}
+                </x-dropdown-link>
+            </form>
+          </x-slot>
+          <x-slot name="content">
+            <!-- Authentication -->
+            <form method="GET" action="{{ route('register') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('register')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Register') }}
+                </x-dropdown-link>
+            </form>
+          </x-slot>
+          @endif
+      </x-dropdown>
+    </div>
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
+        @if (Auth::check())
+        <form action ="/logout" method="post">@csrf
+          <button class="cursor-pointer">Log out</button>
+        </form>
+        @else
         <form action ="/register" method="get">@csrf
           <button class="cursor-pointer">Register</button>
-      </form> 
+        </form>
+        <form action ="/login" method="get">@csrf
+          <button class="cursor-pointer">Login</button>
+        </form>
+        @endif
         {{-- <form action ="/" method="get">
             <button class="cursor-pointer">Home</button>
         </form>@if (Auth::check()) @endif
@@ -28,9 +93,7 @@
         </form>
         <form action ="/products" method="get">@csrf
             <button class="cursor-pointer">Shop</button></form> --}}
-        <form action ="/login" method="get">@csrf
-            <button class="cursor-pointer">Login</button>
-        </form>
+
         @can('viewAdmin', App\Models\Product::class)
           <form action ="/admin" method="get">@csrf
             <button class="cursor-pointer">Admin</button>
@@ -41,6 +104,7 @@
   
 </header>
 <div class="containeur  bg-pink1 p-4"></div> 
+
 @yield('content')
 
 {{-- FOOTER --}}

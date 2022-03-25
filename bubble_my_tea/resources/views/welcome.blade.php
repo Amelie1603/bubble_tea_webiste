@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- HERO --}}
-    
+
 <section class="relative bg-lightpink">
     <div class="container flex flex-col-reverse lg:flex-row items-center gap-12  ">
         <div class="hero container max-w-screen-lg mx-auto pb-10">
@@ -28,11 +28,6 @@
 <section>
     <iframe class="mx-auto mt-4" width="560" height="315" src="https://www.youtube.com/embed/tGT_0f7qeJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </section>
-
-
-  
-            
-            
             
       
 @endsection
