@@ -63,7 +63,6 @@ Route::get('newOrder', [OrdersController::class, 'store'])->middleware('auth');
 
 Route::get('admin', [ProductController::class, 'indexAdmin'])->name('admin');
 Route::get('adminProduct', [ProductController::class, 'show'])->name('product.show');
-
 Route::resource('product', ProductController::class);
 
 require __DIR__.'/auth.php';

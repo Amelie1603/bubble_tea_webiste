@@ -9,7 +9,6 @@ class Product extends Model
 {
     use HasFactory;
 
-    
     protected $fillable = [
         'name',
         'description',
@@ -20,6 +19,5 @@ class Product extends Model
     {
         return $this->belongsToMany('App\Order');
     }
-
 
 }
