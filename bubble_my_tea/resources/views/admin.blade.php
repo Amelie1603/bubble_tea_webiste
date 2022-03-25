@@ -24,11 +24,11 @@
             
             <form action="{{ route('product.destroy', $product) }}" method="POST">   
                
-                <a class="button" href="{{ route('product.edit', $product) }}">Edit</a>   
+                <a href="{{ route('product.edit', $product) }}">Edit</a>   
                 @csrf
                 @method('DELETE')      
                 <button onclick="return confirm('Your product will be deleted. Do you wish to continue ?')" 
-                    class="button" type="submit">Delete</button>
+                    type="submit">Delete</button>
             </form>
             </form>
           </li>
@@ -39,26 +39,5 @@
         @endforeach
       </ul>     
     </div>
-   
-    <style>
-        .button {
-            background-color: darksalmon; 
-            border-radius: 8px; 
-            padding: 0.2rem 0.5rem;
-            margin: 1rem 0 1rem 0.5rem;
-        }
-        .products-container > ul {
-            display:flex;
-            flex-flow: row wrap;
-        }
 
-        .products-container > ul > li {
-            width: 200px;
-            height: 250px;
-            margin: 1rem;
-            padding: 1rem;
-            background-color: grey;
-            border-radius: 10px;
-        }
-    </style>
 @endsection
