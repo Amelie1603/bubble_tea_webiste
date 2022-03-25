@@ -47,7 +47,7 @@ Route::get('/dashboard', function () {
 //     return view('profil');
 // });
 
-Route::get('profil', [UserController::class, 'show'])->middleware('auth');
+Route::resource('profil', UserController::class)->middleware('auth');
 
 Route::get('products', [ProductController::class, 'index']);
 

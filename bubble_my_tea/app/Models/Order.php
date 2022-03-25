@@ -14,3 +14,5 @@ class Order extends Model
         return $this->belongsToMany('App\Products')->using('App\OrderProduct');
     }
 }
+
+
