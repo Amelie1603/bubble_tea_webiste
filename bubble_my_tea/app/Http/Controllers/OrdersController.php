@@ -14,11 +14,7 @@ class OrdersController extends Controller
      */
     public function index()
     {
-            // $products = DB::table('products')->get();
-            $orders = Product::all();
-            // dd($products);
-            return view('profil')->with('order', $order);
-          
+            //   
     }
 
     /**
