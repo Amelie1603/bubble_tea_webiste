@@ -57,6 +57,10 @@ Route::get('addToCart/{id}', [ProductController::class, 'addToCart']);
 
 Route::get('order_products/{id}', [ProductController::class, 'addToCart']);
 
+Route::get('admin', [ProductController::class, 'indexAdmin'])->name('admin');
+Route::get('adminProduct', [ProductController::class, 'show'])->name('product.show');
+
+Route::resource('product', ProductController::class);
 
 require __DIR__.'/auth.php';
 
