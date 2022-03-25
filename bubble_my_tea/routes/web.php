@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +32,7 @@ Route::get('/sign', function () {
 
 // Route::post('/sign', function () {
 //     return view('sign');
-// })->name('signIn');
+// })->name('signIn'); 
 
 // Route::get('user/{id}', function($id) {
 //     return $id;
@@ -47,13 +49,17 @@ Route::get('profil', [UserController::class, 'show'])->middleware('auth');
 
 Route::get('products', [ProductController::class, 'index']);
 
-Route::get('cart', [ProductController::class, 'cart']);
+Route::get('cart', [CartController::class, 'cart']);
+Route::get('addToCart/{id}', [CartController::class, 'addToCart']);
+Route::get('removeOne/{id}', [CartController::class, 'removeOne']);
 
-Route::get('addToCart/{id}', [ProductController::class, 'addToCart']);
+Route::get('confirmOrder', [CartController::class, 'confirmOrder'])->middleware('auth');
+Route::get('newOrder', [OrdersController::class, 'store'])->middleware('auth');
 
-// Route::delete('removeFromCart', [ProductController::class, "remove"]);
 
-Route::get('order_products/{id}', [ProductController::class, 'addToCart']);
+// Route::delete('removeFromCart', [CartController::class, "remove"]);
+
+// Route::get('order_products/{id}', [CartController::class, 'addToCart']);
 
 
 require __DIR__.'/auth.php';

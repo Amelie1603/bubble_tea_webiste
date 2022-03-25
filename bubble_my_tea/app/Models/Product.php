@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    public function roles()
+    {
+        return $this->belongsToMany('App\Order');
+    }
 }
