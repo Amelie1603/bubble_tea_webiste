@@ -34,7 +34,13 @@
       <form action ="/login" method="get">
         @csrf
         <button class="cursor-pointer">Login</button>
-      </form>      
+      </form>
+      @can('viewAdmin', App\Models\Product::class)
+      <form action ="/admin" method="get">
+        @csrf
+        <button class="cursor-pointer">Admin</button>
+      </form>  
+      @endcan
     </ul>
     <div class="flex sm:hidden flex-1 justify-end">
       <i class="fa-regular fa-bars"></i>
