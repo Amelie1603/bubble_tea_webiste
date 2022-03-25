@@ -69,15 +69,15 @@ class CartController extends Controller
     }
   }
 
-  // public function remove(Request $request) 
-  // {
-  //   if ($request->id) {
-  //     $cart = session()->get('cart');
-  //     if (isset($cart[$request->id])) {
-  //       unset($cart[$request->id]);
-  //       session()->put('cart', $cart);
-  //     }
-  //     session()->flash('success', 'Product removed successfully');
-  //   }
-  // }
+  public function confirmOrder() {
+
+    $cart = session()->get('cart');
+    $total = 0;
+
+    foreach(session('cart') as $id => $details) {
+      $total+= $details['price'] * $details['quantity'];
+    };
+    session()->put('total', $total);
+    return view('confirmOrder');
+  }
 }

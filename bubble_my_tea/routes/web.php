@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrdersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,10 @@ Route::get('products', [ProductController::class, 'index']);
 Route::get('cart', [CartController::class, 'cart']);
 Route::get('addToCart/{id}', [CartController::class, 'addToCart']);
 Route::get('removeOne/{id}', [CartController::class, 'removeOne']);
+
+Route::get('confirmOrder', [CartController::class, 'confirmOrder'])->middleware('auth');
+Route::get('newOrder', [OrdersController::class, 'store'])->middleware('auth');
+
 
 // Route::delete('removeFromCart', [CartController::class, "remove"]);
 

@@ -8,7 +8,7 @@
             <h3>{{$product->name}}</h3>
             <p>{{$product->description}}</p>
             <span>{{number_format($product->price, 2, ',', ' ')}} €</span>
-            <p><a href={{ url('addToCart/'.$product->id) }}>+</a></p>
+            <div class="add"><a href={{ url('addToCart/'.$product->id) }}>Ajouter</a></div>
           </div>
         @endforeach    
       </div>
@@ -20,16 +20,19 @@
       <?php $total += $details['price'] * $details['quantity'] ?>
         <h3><span>x {{$details['quantity']}}</span>  {{$details['name']}}</h3>
         <div class="cart-detail">
+          <div class="quantity">
+            <div><a href={{ url('removeOne/'.$id) }}>-</a></div>
+            <div><a href={{ url('addToCart/'.$id) }}>+</a></div>
+          </div>
           <span>{{number_format($details['price'], 2, ',', ' ')}} €</span>
         </div>
-        <p><a href={{ url('removeOne/'.$id) }}>-</a></p>
-        <p><a href={{ url('addToCart/'.$id) }}>+</a></p>
+        
       @endforeach
       <div class="total">
         <h4>Total : </h4>
         <span>{{number_format($total, 2, ',', ' ')}} €</span>
       </div>
-      <form action="order">
+      <form action="confirmOrder" method="GET">
         @csrf
         <button type="submit">Commander</button>
       </form>
@@ -65,15 +68,32 @@
       background-color: #FFF4F4;
       border-radius: 10px;
       padding: 10px;
+      position: relative;
+      
     }
     .product-tile>h3 {
       font-weight: 600;
+      text-transform: capitalize;
     }
     .product-tile>p {
       font-size: 14px;
       margin: 10px 0;
     }
-
+    .add {
+      padding: 0 10px;
+      border-radius: 20px;
+      border: 1px solid black;
+      width: fit-content;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background-color: #fff4f4;
+      transition: .2s ease;
+    }
+    .add:hover {
+      background: #fff;
+      transition: .2s ease;
+    }
     .cart-container {
       padding: 20px;
       width: 22%;
@@ -90,8 +110,8 @@
     .total {
       display: flex;
       justify-content: space-between;
-      padding-top: 20px;
-      margin-top: 20px;
+      padding-top: 15px;
+      margin-top: 50px;
       border-top: 1px solid black;
     }
     .cart-container {
@@ -100,12 +120,37 @@
     }
     .cart-detail {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
     .cart-container button {
       border: 1px solid black;
       border-radius: 20px;
       padding: 10px;
+      margin-top: 20px;
+      float: right;
+      transition: .2s ease;
+    }
+    .cart-container button:hover {
+      background-color: #fff4f4;
+      transition: .2s ease;
+    }
+    .quantity {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .quantity div {
+      padding: 0 5px 2px 5px;
+      cursor: pointer;
+      border: 1px solid #acacac;
+      border-radius: 2px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 24px;
     }
   </style>
 @endsection
