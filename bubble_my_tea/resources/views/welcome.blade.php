@@ -12,7 +12,7 @@
     </div>
 </section>
 
-<section class="bg-pink columns-3">
+<section class="bg-pink columns-4">
     <p class="text-center mt-2">Le Bubble Tea c'est quoi ?</p><br> Le thé aux perles, aussi appelé zenzou (chinois : 珍珠奶茶 ; pinyin : zhēnzhū nǎichá ; litt. « thé au lait de perle »), boba (translittération de bubble en chinois), bubble tea ou thé aux bulles par calque de l'anglais1, est une boisson originaire de Taïwan. C'est un mélange de thé froid ou chaud et de lait, parfumé de diverses saveurs et additionné de boules noires de tapioca, qui donnent son nom au thé aux perles. Ces dernières s'aspirent généralement au moyen d'une paille de gros diamètre.<p>
         
        
