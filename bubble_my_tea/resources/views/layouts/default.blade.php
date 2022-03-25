@@ -17,19 +17,23 @@
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>
       <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 uppercase ">
-        <form action ="/" method="get">
+        <form action ="/register" method="get">@csrf
+          <button class="cursor-pointer">Register</button>
+      </form> 
+        {{-- <form action ="/" method="get">
             <button class="cursor-pointer">Home</button>
         </form>@if (Auth::check()) @endif
         <form action ="/profil" method="get">@csrf
             <button class="cursor-pointer">Profil</button>
         </form>
         <form action ="/products" method="get">@csrf
-            <button class="cursor-pointer">Shop</button></form>
+            <button class="cursor-pointer">Shop</button></form> --}}
         <form action ="/login" method="get">@csrf
             <button class="cursor-pointer">Login</button>
         </form>      
       </ul>
   </nav>
+  
 </header>
 <div class="containeur  bg-pink1 p-4"></div> 
 @yield('content')

@@ -13,6 +13,7 @@ module.exports = {
        './resources/views/components/auth-session-status.blade.php',
       './resources/views/auth/login.blade.php,',
       './resources/views/components/dropdown-link.blade.php',
+      './resources/views/components/label.blade.php',
       
     ],
 
