@@ -19,8 +19,8 @@
         @foreach ($products as $product)
           <li>
             <h2>{{$product->name}}</h2>
-            <p>{{$product->description}}</p>
             <span>{{$product->price}} €</span>
+            <p>{{$product->description}}</p>
             
             <form action="{{ route('product.destroy', $product) }}" method="POST">   
                

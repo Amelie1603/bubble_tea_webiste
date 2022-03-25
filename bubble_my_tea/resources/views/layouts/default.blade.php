@@ -30,7 +30,12 @@
             <button class="cursor-pointer">Shop</button></form> --}}
         <form action ="/login" method="get">@csrf
             <button class="cursor-pointer">Login</button>
-        </form>      
+        </form>
+        @can('viewAdmin', App\Models\Product::class)
+          <form action ="/admin" method="get">@csrf
+            <button class="cursor-pointer">Admin</button>
+          </form>  
+        @endcan      
       </ul>
   </nav>
   
