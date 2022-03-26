@@ -19,16 +19,17 @@ class UserController extends Controller
     {
         //$userOrder = DB::table('bubble_my_tea')
         $user = User::where('id', $req->user()->id)->get();
-        $order = Order::where('user_id', $req->user()->id)->get();
-        echo "<script>console.log('Debug Objects: " . $order . "' );</script>";
+        $orders = Order::where('user_id', $req->user()->id)->get();
+        //echo "<script>console.log('Debug Objects: " . $order . "' );</script>";
         // $order = [
         //     $name = 'lena',
         //     $lastname = 'martin'
         // ]; 
         $data = [
             'user' => $user,
-            'orders' => $order
+            'orders' => $orders,
         ];
+        //dd($data);
         return view('profil')->with($data);
         // ->join('user', 'users.id', '=', '')
 

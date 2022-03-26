@@ -9,9 +9,15 @@
             
  
    @foreach($orders as $order)    
-         <p> hello </P>   
-            <p> {{$order}} </p>
+
+            <p> {{$order->id}} </p>
+
+            @foreach ($order->orderProducts as $op)
+               {{ $op->product->name}}
+            @endforeach
+
    @endforeach
+
 @endsection
 
 
