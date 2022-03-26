@@ -4,7 +4,7 @@
 <header class="font-pacifico bg-pink flex items-center p-4 py-1">
   <nav x-data="{ open: true }" class="container mx-auto">
       <h1 class="text-5xl text-center mt-2">Bubble My Tea</h1>
-      <p class="text-gray text-center mt-4 text-xl ">Même les pandas en boivent !</p>
+      <p class="text-gray text-center mt-6 text-xl ">Même les pandas en boivent !</p>
     <div class=" w-20 justify-start">
       <img class="logo3" src="resources/views/panda.png" alt="logo du site"/>
     </div>

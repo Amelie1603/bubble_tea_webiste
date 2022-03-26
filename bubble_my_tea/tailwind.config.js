@@ -14,6 +14,7 @@ module.exports = {
       './resources/views/auth/login.blade.php,',
       './resources/views/components/dropdown-link.blade.php',
       './resources/views/components/label.blade.php',
+      './resources/views/auth/login.blade.php',
       
       
     ],
@@ -24,6 +25,7 @@ module.exports = {
             "pink1":"#fca5a5",
             "gray":"#9ca3af",
             "lightpink":"#FFFAFA",
+            "lightgray":"#e5e7eb",
         },
         extend: {
            

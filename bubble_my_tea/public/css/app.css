@@ -549,11 +549,11 @@ select{
 .relative{
   position: relative;
 }
-.left-0{
-  left: 0px;
-}
 .right-0{
   right: 0px;
+}
+.left-0{
+  left: 0px;
 }
 .top-0{
   top: 0px;
@@ -577,14 +577,17 @@ select{
 .mt-4{
   margin-top: 1rem;
 }
+.mt-3{
+  margin-top: 0.75rem;
+}
+.mr-auto{
+  margin-right: auto;
+}
+.ml-auto{
+  margin-left: auto;
+}
 .mt-6{
   margin-top: 1.5rem;
-}
-.ml-3{
-  margin-left: 0.75rem;
-}
-.-ml-px{
-  margin-left: -1px;
 }
 .mb-4{
   margin-bottom: 1rem;
@@ -595,11 +598,14 @@ select{
 .ml-2{
   margin-left: 0.5rem;
 }
+.ml-3{
+  margin-left: 0.75rem;
+}
+.-ml-px{
+  margin-left: -1px;
+}
 .-mr-2{
   margin-right: -0.5rem;
-}
-.mt-3{
-  margin-top: 0.75rem;
 }
 .ml-4{
   margin-left: 1rem;
@@ -634,11 +640,11 @@ select{
 .h-4{
   height: 1rem;
 }
-.h-5{
-  height: 1.25rem;
-}
 .h-20{
   height: 5rem;
+}
+.h-5{
+  height: 1.25rem;
 }
 .h-16{
   height: 4rem;
@@ -663,6 +669,9 @@ select{
 }
 .w-full{
   width: 100%;
+}
+.w-10{
+  width: 2.5rem;
 }
 .w-5{
   width: 1.25rem;
@@ -802,6 +811,10 @@ select{
 .bg-pink{
   --tw-bg-opacity: 1;
   background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+.bg-lightgray{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .bg-lightpink{
   --tw-bg-opacity: 1;
