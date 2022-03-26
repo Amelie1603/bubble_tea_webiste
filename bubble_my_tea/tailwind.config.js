@@ -15,6 +15,7 @@ module.exports = {
       './resources/views/components/dropdown-link.blade.php',
       './resources/views/components/label.blade.php',
       
+      
     ],
 
     theme: {
