@@ -13,6 +13,17 @@ class Order extends Model
     {
         return $this->belongsToMany('App\Products')->using('App\OrderProduct');
     }
+
+   public function orderProducts()
+   {
+      return$this->hasMany(OrderProduct::class);
+   }
+
+   public function user()
+   {
+      return$this->belongsTo(User::class);
+   }
+
 }
 
 
