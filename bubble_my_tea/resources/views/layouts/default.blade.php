@@ -61,9 +61,18 @@
 
                                 <x-dropdown-link :href="url('products')" onclick="event.preventDefault();
                                                     this.closest('form').submit();">
-                                    {{ __('Produit') }}
+                                    {{ __('Produits') }}
                                 </x-dropdown-link>
                             </form>
+                            <form method="GET" action="{{ url('/profil') }}">
+                                @csrf
+
+                                <x-dropdown-link :href="url('profil')" onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                                    {{ __('Profil') }}
+                                </x-dropdown-link>
+                            </form>
+                            
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 

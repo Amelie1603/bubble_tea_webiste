@@ -14,7 +14,7 @@
       </div>
       @if(session('cart'))
       <div class="cart-container">
-        <h2>Shopping Cart</h2>
+        <h2>Panier</h2>
       <?php $total = 0 ?>
       @foreach(session('cart') as $id => $details)
       <?php $total += $details['price'] * $details['quantity'] ?>
