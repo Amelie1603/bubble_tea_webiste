@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Product;
+use App\Models\Order;
+
 
 class UserController extends Controller
 {
@@ -12,9 +15,26 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        //
+        //$userOrder = DB::table('bubble_my_tea')
+        $user = User::where('id', $req->user()->id)->get();
+        $orders = Order::where('user_id', $req->user()->id)->get();
+        //echo "<script>console.log('Debug Objects: " . $order . "' );</script>";
+        // $order = [
+        //     $name = 'lena',
+        //     $lastname = 'martin'
+        // ]; 
+        $data = [
+            'user' => $user,
+            'orders' => $orders,
+        ];
+        //dd($data);
+        return view('profil')->with($data);
+        // ->join('user', 'users.id', '=', '')
+
+        //>get();
+
     }
 
     /**

@@ -1,11 +1,26 @@
 @extends('layouts.default')
 
 @section('content')
-   <h1> Je ne comprends pas le CSS </h1>
-   <h1> Profil</h1>
    <h2> Mes commandes</h2>
-   <p> Voir mes commandes </p>
-   <h2> Modifier mes informations</h2>
-   <h2> </h2>
+   <br>
+
+   @foreach($orders as $order)    
+
+            <p> Numéro de la commande : {{$order->id}} </p>
+
+            @foreach ($order->orderProducts as $op)
+               {{ $op->quantity}} 
+               {{ $op->product->name}}
+               
+               ( {{ $op->product->price}}  euros à l'unité)  <br>
+               
+            @endforeach
+            
+            prix de la commande = {{ $order->price }} euros <br>
+            <br>
+
+   @endforeach
 
 @endsection
+
+
