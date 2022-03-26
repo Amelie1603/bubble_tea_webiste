@@ -121,6 +121,27 @@
         </main>
         <!-- Page Footer -->
     </div>
+    <footer class="bg-lightgray mt-3 flex items-center p-4 flex-wrap">
+
+        <a  href="https://www.instagram.com/%22%3E" ><img src="/resources/views/instagram.png" width=40px> </a>
+       
+        <a  href="https://fr.linkedin.com/" ><img src="/resources/views/linkedin.png" width=40px></a>
+        <a  href="https://twitter.com/?lang=fr" ><img src="/resources/views/twitter.png" width=40px> </a>
+        
+        <a  href="https://twitter.com/?lang=fr" ><img src="/resources/views/facebook.png" width=40px> </a>
+  
+  
+        <div class="absolute right-0">
+        <p>Bubble_My_Tea © Copyright 2022</p>
+        </div>
+  
+        <div class="mr-auto ml-auto">
+        <a class="" href="/">Home -
+        <a class="" href="/product">Services
+  
+  
+        </div>
+  </footer>
 </body>
 
 </html>
